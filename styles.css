@@ -5,9 +5,10 @@ body {
 }
 
 header {
-  background-color: #f0f0f0;
+  background-color: #0087BD;
   padding: 20px;
   text-align: center;
+  color: #FFFFFF
 }
 
 .controls {

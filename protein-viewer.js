@@ -1,7 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const proteinUrls = [
-    "https://files.rcsb.org/download/1CRN.pdb", // Replace these URLs with the URLs of the PDB files you want to display
-    "https://files.rcsb.org/download/2BTF.pdb",
+  const proteinData = [
+   { url: "https://files.rcsb.org/download/7TVW.pdb", name: "7TVW" },
+   { url: "https://files.rcsb.org/download/6EZR.pdb", name: "6EZR" },
+   { url: "https://files.rcsb.org/download/6EZS.pdb", name: "6EZS" },
+   { url: "https://files.rcsb.org/download/6EZT.pdb", name: "6EZT" },
+   { url: "https://files.rcsb.org/download/6ATX.pdb", name: "6ATX" },
+   { url: "https://files.rcsb.org/download/6AZB.pdb", name: "6AZB" },
+   { url: "https://files.rcsb.org/download/6AZC.pdb", name: "6AZC" },
+   { url: "https://files.rcsb.org/download/6EZD.pdb", name: "6EZD" },
+   { url: "https://files.rcsb.org/download/6AVV.pdb", name: "6AVV" },
+   { url: "https://files.rcsb.org/download/6AVW.pdb", name: "6AVW" },
+   { url: "https://files.rcsb.org/download/6AVX.pdb", name: "6AVX" },
+   { url: "https://files.rcsb.org/download/6AVY.pdb", name: "6AVX" },
+   { url: "https://files.rcsb.org/download/4QAM.pdb", name: "4QAM" },
+   { url: "https://files.rcsb.org/download/3U0V.pdb", name: "3U0V" },
   ];
 
   const main = document.querySelector("main");
@@ -19,8 +31,14 @@ document.addEventListener("DOMContentLoaded", function () {
     return select;
   }
 
-  proteinUrls.forEach((url, index) => {
+  proteinData.forEach(({ url, name }, index) => {
     const containerId = `viewport${index + 1}`;
+
+    // Add name of the protein structure
+    const title = document.createElement("h2");
+    title.textContent = name;
+    main.appendChild(title);
+
     const viewport = document.createElement("div");
     viewport.setAttribute("id", containerId);
     viewport.style.width = "100%";
@@ -67,6 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
       component.autoView();
     });
 
-    stage.setParameters({ backgroundColor: "white" });
+    stage.setParameters({ backgroundColor: "black" });
   });
 });
