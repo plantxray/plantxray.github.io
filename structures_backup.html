@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Structure Gallery</title>
 	<link rel="icon" type="image/png" href="plantxray_logo_2.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/ngl@2.0.0-dev.40/dist/ngl.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -154,6 +154,10 @@ function toggleMenu() {
         <p class="caption"><a href="https://www.rcsb.org/structure/6AVV" target="_blank">6AVV</a> - <i>Arabidopsis thaliana</i> SOBER1</p>
     </div>
     <div class="viewport-wrapper">
+        <div id="viewport7" class="viewport"></div>
+        <p class="caption"><a href="https://www.rcsb.org/structure/6AVY" target="_blank">6AVY</a> - <i>Zea mays</i> APT2</p>
+    </div>
+    <div class="viewport-wrapper">
         <div id="viewport8" class="viewport"></div>
         <p class="caption"><a href="https://www.rcsb.org/structure/6EZS" target="_blank">6EZS</a> - <i>Vibrio harveyi</i> GlcNAcase</p>
     </div>
@@ -214,7 +218,12 @@ function toggleMenu() {
                 changeRepresentation("cartoon", currentObject6, '106 or 160 or 192');
             });
                         
-        
+            var stage7 = new NGL.Stage("viewport7", {backgroundColor: "#FEFEFA"});
+            stage7.loadFile("6avy.pdb").then(function(o) {
+                currentObject7 = o;
+                changeRepresentation("cartoon", currentObject7, '126 or 197 or 230');
+            });
+                        
             var stage8 = new NGL.Stage("viewport8", {backgroundColor: "#FEFEFA"});
             stage8.loadFile("6ezs.pdb").then(function(o) {
                 currentObject8 = o;
