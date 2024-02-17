@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Structure Gallery</title>
+	<link rel="icon" type="image/png" href="plantxray_logo_2.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/ngl@2.0.0-dev.40/dist/ngl.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: space-between; /* Adjusted to space-between to move the logo to the right */
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            width: 75px;
+            height: auto;
+            margin-right: 5px; /* Adjusted to right for consistency */
+            margin-top: 5px;
+        }
+        .container {
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            font-size: 30px;
+            color: #fff;
+            padding: 25px;
+            margin: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            background: linear-gradient(to right, #FF6347, #C40234); 
+            border-radius: 10px;
+            z-index: -1;
+        }
+        .viewport-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .viewport-wrapper {
+            width: 400px;
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .viewport {
+            width: 100%;
+            height: 400px;
+        }
+        .caption {
+            text-align: center;
+            margin: 10px 0;
+        }
+        /* Menu styles */
+#menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    margin-top: 20px; /* Adjust as needed for positioning */
+    z-index: 1000;
+	text-align: left;
+}
+
+#menu a {
+    font-size: 30px; /* Increase font size for links */
+    color: #333; /* Change the color if needed */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.menu-btn {
+    font-size: 40px; /* Adjusts only the hamburger icon size */
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PROTEINS</h1>
+        <div class="logo-container">
+            <!-- Menu Button -->
+            <div class="menu-btn" onclick="toggleMenu()">☰</div>
+            <img class="logo" src="plantxray_logo_2.png" alt="logo">
+        </div>
+        <!-- Hidden Menu -->
+        <div id="menu">
+            <a href="index.html">Home</a><br>
+            <a href="publications.html">Publications</a><br>
+            <a href="structures.html">Structure Gallery</a>
+        </div>
+    </div>
+
+    <script>
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    // Check if menu.style.display is "block", implying the menu is already open.
+    // Otherwise, treat it as if it needs to be shown (covers both "none" and "" cases).
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+
+    </script>
+</body>
+</html>
+
+<body>
+<div class="viewport-container">
+    <style>
+        .caption a {
+            color: #C40234; /* Set the link color */
+            text-decoration: none; /* Optional: Removes underline from links */
+        }
+        .caption a:hover {
+            text-decoration: underline; /* Optional: Adds underline on hover for better usability */
+        }
+    </style>
+    <div class="viewport-wrapper">
+        <div id="viewport1" class="viewport"></div>
+        <p class="caption"><a href="https://www.rcsb.org/structure/7UOC" target="_blank">7UOC</a> - <i>Orobanche minor</i> KAI2d4</p>
+    </div>
+    <div class="viewport-wrapper">
+        <div id="viewport2" class="viewport"></div>
+        <p class="caption"><a href="https://www.rcsb.org/structure/6ATX" target="_blank">6ATX</a> - <i>Physcomitrium patens</i> KAI2-like C</p>
+    </div>
+    <div class="viewport-wrapper">
+        <div id="viewport3" class="viewport"></div>
+        <p class="caption"><a href="https://www.rcsb.org/structure/6AZB" target="_blank">6AZB</a> - <i>Physcomitrium patens</i> KAI2-like E</p>
+    </div>
+    <div class="viewport-wrapper">
+        <div id="viewport4" class="viewport"></div>
+        <p class="caption"><a href="https://www.rcsb.org/structure/6AZD" target="_blank">6AZD</a> - <i>Physcomitrium patens</i> KAI2-like H</p>
+    </div>
+    <div class="viewport-wrapper">
+        <div id="viewport5" class="viewport"></div>
+        <p class="caption"><a href="https://www.rcsb.org/structure/7TVW" target="_blank">7TVW</a> - <i>Arabidopsis thaliana</i> DLK2</p>
+    </div>
+    <div class="viewport-wrapper">
+        <div id="viewport6" class="viewport"></div>
+        <p class="caption"><a href="https://www.rcsb.org/structure/6AVV" target="_blank">6AVV</a> - <i>Arabidopsis thaliana</i> SOBER1</p>
+    </div>
+    <div class="viewport-wrapper">
+        <div id="viewport8" class="viewport"></div>
+        <p class="caption"><a href="https://www.rcsb.org/structure/6EZS" target="_blank">6EZS</a> - <i>Vibrio harveyi</i> GlcNAcase</p>
+    </div>
+    <div class="viewport-wrapper">
+        <div id="viewport9" class="viewport"></div>
+        <p class="caption"><a href="https://www.rcsb.org/structure/3U0V" target="_blank">3U0V</a> - <i>Homo sapiens</i> LYPLAL1</p>
+    </div>
+</div>
+
+
+
+<script>
+    var currentObjects = {}; // Object to store current objects
+
+    function changeRepresentation(type, currentObject, residues) {
+        if (currentObject) {
+            currentObject.removeAllRepresentations();
+            currentObject.addRepresentation(type, {colorScheme: 'sstruc'});
+            currentObject.addRepresentation('ball+stick', {sele: `(${residues}) and not (.C or .O or .N)`});
+            setTimeout(() => currentObject.autoView(), 100); // Introduce a delay before autoView
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var stages = [];
+
+        function createStage(id, filename, residues) {
+            var stage = new NGL.Stage(id, {backgroundColor: "#FEFEFA"});
+            stage.loadFile(filename).then(function(o) {
+                o.addRepresentation("cartoon", {colorScheme: 'sstruc'});
+                o.addRepresentation('ball+stick', {sele: `(${residues}) and not (.C or .O or .N)`});
+                o.autoView();
+                stages.push({id: id, stage: stage, object: o});
+                currentObjects[id] = o; // Store current object
+            });
+        }
+
+        createStage("viewport1", "7uoc.pdb", '96 or 218 or 247');
+        createStage("viewport2", "6atx.pdb", '98 or 220 or 249');
+        createStage("viewport3", "6azb.pdb", '97 or 219 or 248');
+        createStage("viewport4", "6azd.pdb", '98 or 220 or 249');
+        createStage("viewport5", "7tvw.pdb", '102 or 223 or 253');
+        createStage("viewport6", "6avv.pdb", '106 or 160 or 192');
+        createStage("viewport8", "6ezs.pdb", '274 or 530 or 532 or 584 or NAG');
+        createStage("viewport9", "3u0v.pdb", '124 or 179 or 211');
+
+function handleTouchZoom(stage, event) {
+    if (event.touches.length === 2) {
+        // Check if the touch event's target is the same as the stage's canvas
+        if (event.target === stage.viewer.renderer.domElement) {
+            var touch1 = event.touches[0];
+            var touch2 = event.touches[1];
+            var distance = Math.sqrt(
+                Math.pow(touch2.clientX - touch1.clientX, 2) +
+                Math.pow(touch2.clientY - touch1.clientY, 2)
+            );
+            stage.viewerControls.zoom(distance);
+        }
+    }
+}
+
+        stages.forEach(function(stageObj) {
+            var element = document.getElementById(stageObj.id);
+            element.addEventListener("touchstart", function(event) {
+                event.preventDefault();
+                if (event.touches.length === 2) {
+                    handleTouchZoom(stageObj.stage, event);
+                }
+            });
+
+            element.addEventListener("touchmove", function(event) {
+                event.preventDefault();
+                if (event.touches.length === 2) {
+                    handleTouchZoom(stageObj.stage, event);
+                }
+            });
+
+            // Additional event listener for touch rotation
+            var hammer = new Hammer(element);
+            hammer.get('rotate').set({ enable: true });
+            hammer.on('rotate', function(event) {
+                stageObj.stage.viewerControls.rotate(event.rotation);
+            });
+        });
+    });
+</script>
+
+
+</body>
+</html>
