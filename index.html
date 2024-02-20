@@ -45,12 +45,23 @@ h2 {
     text-decoration: none;
     margin-top: 20px;
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .nav-links a {
     color: #C7171A;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links img {
+    width: auto;
+    height: 30px;
+    margin-right: 10px;
   }
 
   .nav-links a:hover {
@@ -177,8 +188,8 @@ h2 {
 </div>
 
 <div class="nav-links">
-  <a href="publications.html">Publications</a>
-  <a href="structures.html">Structure Gallery</a>
+  <a href="publications.html"><img src="books.png" alt="Books Icon">Publications</a>
+  <a href="structures.html"><img src="structure.png" alt="Structure Icon">Structure Gallery</a>
 </div>
 
 <div class="section-divider"></div> <!-- Divider added here -->
