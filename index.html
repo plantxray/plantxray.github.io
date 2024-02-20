@@ -51,7 +51,7 @@ h2 {
   }
 
   .nav-links a {
-    color: #C7171A;
+    color: #0018A8;
     text-decoration: none;
     margin: 5px 0;
     display: flex;
@@ -64,9 +64,11 @@ h2 {
     margin-right: 10px;
   }
 
-  .nav-links a:hover {
-    text-decoration: underline;
-  }
+.nav-links a:hover {
+    text-decoration: none; /* Disable the underline */
+    color: #1D2951; /* Change text color */
+}
+
 
   /* About Me Section Styles */
   .about-me {
@@ -113,6 +115,24 @@ h2 {
   p {
     margin: 5px 0; /* Default spacing for other paragraphs */
   }
+  
+         .social-links {
+            margin: 20px 0;
+        }
+        .social-links img {
+    width: auto;
+    height: 30px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+        }
 
   /* Form Styles */
   #fs-frm {
@@ -195,7 +215,11 @@ h2 {
 <div class="section-divider"></div> <!-- Divider added here -->
 <hr>
 <p>Happy to connect. Please leave a message.</p>
-
+<div class="social-links">
+    <a href="https://twitter.com/plantxray" target="_blank"><img src="x_logo.png" /></a>
+    <a href="https://www.researchgate.net/profile/Marco_Buerger" target="_blank"><img src="researchgate_logo.png" /></a>
+    <a href="https://scholar.google.com/citations?hl=en&user=U40TV3cAAAAJ&view_op=list_works&sortby=pubdate" target="_blank"><img src="google-scholar_logo.png" /></a>
+</div>
 <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mvoeallk" method="post">
   <fieldset>
     <label for="full-name">Name</label>
@@ -209,5 +233,3 @@ h2 {
   <input type="submit" value="Submit">
 </form>
 
-</body>
-</html>
