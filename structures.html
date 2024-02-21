@@ -235,7 +235,7 @@
             var stage6 = new NGL.Stage("viewport6", {backgroundColor: "#FEFEFA"});
             stage6.loadFile("4qam.pdb").then(function(o) {
                 currentObject6 = o;
-                changeRepresentation("cartoon");
+                changeRepresentation("cartoon", currentObject6);
             });
             
             var stage7 = new NGL.Stage("viewport7", {backgroundColor: "#FEFEFA"});
