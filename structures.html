@@ -115,6 +115,24 @@
             <a href="structures.html">Structure Gallery</a>
         </div>
     </div>
+	
+    <script>
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    // Check if menu.style.display is "block", implying the menu is already open.
+    // Otherwise, treat it as if it needs to be shown (covers both "none" and "" cases).
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+
+    </script>
+</body>
+</html>
+
+<body>
 
     <div class="viewport-container">
         <div class="viewport-wrapper">
@@ -190,7 +208,7 @@
     </div>
 
     <script>
-        var currentObject1, currentObject2, currentObject3, currentObject4;
+        var currentObject1, currentObject2, currentObject3, currentObject4, currentObject5, currentObject6, currentObject7;
 
         function changeRepresentation(type, currentObject, residues) {
             if (currentObject) {
@@ -235,7 +253,7 @@
             var stage6 = new NGL.Stage("viewport6", {backgroundColor: "#FEFEFA"});
             stage6.loadFile("4qam.pdb").then(function(o) {
                 currentObject6 = o;
-                changeRepresentation("cartoon", currentObject6);
+                changeRepresentation("cartoon", currentObject6, none);
             });
             
             var stage7 = new NGL.Stage("viewport7", {backgroundColor: "#FEFEFA"});
