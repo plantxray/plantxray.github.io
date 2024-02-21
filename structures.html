@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Structure Gallery</title>
-	<link rel="icon" type="image/png" href="plantxray_logo_2.png">
+    <link rel="icon" type="image/png" href="plantxray_logo_2.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/ngl@2.0.0-dev.40/dist/ngl.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -16,14 +16,14 @@
         }
         .logo-container {
             display: flex;
-            justify-content: space-between; /* Adjusted to space-between to move the logo to the right */
+            justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
         }
         .logo {
             width: 75px;
             height: auto;
-            margin-right: 5px; /* Adjusted to right for consistency */
+            margin-right: 5px;
             margin-top: 5px;
         }
         .container {
@@ -62,39 +62,53 @@
             text-align: center;
             margin: 10px 0;
         }
-        /* Menu styles */
-#menu {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    margin-top: 20px; /* Adjust as needed for positioning */
-    z-index: 1000;
-	text-align: left;
-}
-
-#menu a {
-    font-size: 30px; /* Increase font size for links */
-    color: #333; /* Change the color if needed */
-    text-decoration: none; /* Removes underline from links */
-}
-
-.menu-btn {
-    font-size: 40px; /* Adjusts only the hamburger icon size */
-    cursor: pointer;
-}
+        .caption a {
+            color: #C7171A;
+            text-decoration: none;
+        }
+        .caption a:hover {
+    text-decoration: none; /* Disable the underline */
+    color: #800000; /* Change text color */
+        }
+        .paper-link a {
+            color: #0018A8; 
+            text-decoration: none;
+        }
+        .paper-link a:hover {
+    text-decoration: none; /* Disable the underline */
+    color: #1D2951; /* Change text color */
+        }
+        .paper-link {
+            text-align: center;
+            margin-top: -5px; /* Adjust for visual spacing */
+        }
+        #menu {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1000;
+            text-align: left;
+        }
+        #menu a {
+            font-size: 30px;
+            color: #333;
+            text-decoration: none;
+        }
+        .menu-btn {
+            font-size: 40px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>PROTEINS</h1>
         <div class="logo-container">
-            <!-- Menu Button -->
             <div class="menu-btn" onclick="toggleMenu()">☰</div>
             <img class="logo" src="plantxray_logo_2.png" alt="logo">
         </div>
-        <!-- Hidden Menu -->
         <div id="menu">
             <a href="index.html">Home</a><br>
             <a href="publications.html">Publications</a><br>
@@ -102,137 +116,88 @@
         </div>
     </div>
 
+    <div class="viewport-container">
+        <div class="viewport-wrapper">
+            <div id="viewport1" class="viewport"></div>
+            <p class="caption">
+                <a href="https://www.rcsb.org/structure/7UOC" target="_blank">7UOC</a> - <i>Orobanche minor</i> KAI2d4
+            </p>
+            <p class="paper-link">
+                Read the paper:<br>
+                <a href="https://doi.org/10.1093/pcp/pcad026" target="_blank">https://doi.org/10.1093/pcp/pcad026</a>
+            </p>
+        </div>
+        <div class="viewport-wrapper">
+            <div id="viewport5" class="viewport"></div>
+            <p class="caption">
+                <a href="https://www.rcsb.org/structure/7TVW" target="_blank">7TVW</a> - <i>Arabidopsis thaliana</i> DLK2
+            </p>
+            <p class="paper-link">
+                Read the paper:<br>
+                <a href="https://doi.org/10.1002/pld3.446" target="_blank">https://doi.org/10.1002/pld3.446</a>
+            </p>
+        </div>
+        <div class="viewport-wrapper">
+            <div id="viewport3" class="viewport"></div>
+            <p class="caption">
+                <a href="https://www.rcsb.org/structure/6AZB" target="_blank">6AZB</a> - <i>Physcomitrium patens</i> KAI2-like E
+            </p>
+            <p class="paper-link">
+                Read the paper:<br>
+                <a href="https://doi.org/10.1016/j.celrep.2019.01.003" target="_blank">https://doi.org/10.1016/j.celrep.2019.01.003</a>
+            </p>
+        </div>
+        <div class="viewport-wrapper">
+            <div id="viewport6" class="viewport"></div>
+            <p class="caption">
+                <a href="https://www.rcsb.org/structure/6AVV" target="_blank">6AVV</a> - <i>Arabidopsis thaliana</i> SOBER1
+            </p>
+            <p class="paper-link">
+                Read the paper:<br>
+                <a href="https://doi.org/10.1038/s41467-017-02347-w" target="_blank">https://doi.org/10.1038/s41467-017-02347-w</a>
+            </p>
+        </div>
+        <div class="viewport-wrapper">
+            <div id="viewport8" class="viewport"></div>
+            <p class="caption">
+                <a href="https://www.rcsb.org/structure/6EZS" target="_blank">6EZS</a> - <i>Vibrio harveyi</i> GlcNAcase
+            </p>
+            <p class="paper-link">
+                Read the paper:<br>
+                <a href="https://doi.org/10.1107/S2059798321002771" target="_blank">https://doi.org/10.1107/S2059798321002771</a>
+            </p>
+        </div>
+        <div class="viewport-wrapper">
+            <div id="viewport9" class="viewport"></div>
+            <p class="caption">
+                <a href="https://www.rcsb.org/structure/4QAM" target="_blank">4QAM</a> - <i>Homo sapiens</i> RPGRIP1
+            </p>
+            <p class="paper-link">
+                Read the paper:<br>
+                <a href="https://doi.org/10.1016/j.celrep.2014.05.049" target="_blank">https://doi.org/10.1016/j.celrep.2014.05.049</a>
+            </p>
+        </div>
+        <div class="viewport-wrapper">
+            <div id="viewport9" class="viewport"></div>
+            <p class="caption">
+                <a href="https://www.rcsb.org/structure/3U0V" target="_blank">3U0V</a> - <i>Homo sapiens</i> LYPLAL1
+            </p>
+            <p class="paper-link">
+                Read the paper:<br>
+                <a href="https://doi.org/10.1194/jlr.M019851" target="_blank">https://doi.org/10.1194/jlr.M019851</a>
+            </p>
+        </div>
+    </div>
+
     <script>
-function toggleMenu() {
-    var menu = document.getElementById("menu");
-    // Check if menu.style.display is "block", implying the menu is already open.
-    // Otherwise, treat it as if it needs to be shown (covers both "none" and "" cases).
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
-    }
-}
-
-    </script>
-</body>
-</html>
-
-<body>
-<div class="viewport-container">
-    <style>
-        .caption a {
-            color: #C40234; /* Set the link color */
-            text-decoration: none; /* Optional: Removes underline from links */
-        }
-        .caption a:hover {
-            text-decoration: underline; /* Optional: Adds underline on hover for better usability */
-        }
-    </style>
-    <div class="viewport-wrapper">
-        <div id="viewport1" class="viewport"></div>
-        <p class="caption"><a href="https://www.rcsb.org/structure/7UOC" target="_blank">7UOC</a> - <i>Orobanche minor</i> KAI2d4</p>
-    </div>
-    <div class="viewport-wrapper">
-        <div id="viewport2" class="viewport"></div>
-        <p class="caption"><a href="https://www.rcsb.org/structure/6ATX" target="_blank">6ATX</a> - <i>Physcomitrium patens</i> KAI2-like C</p>
-    </div>
-    <div class="viewport-wrapper">
-        <div id="viewport3" class="viewport"></div>
-        <p class="caption"><a href="https://www.rcsb.org/structure/6AZB" target="_blank">6AZB</a> - <i>Physcomitrium patens</i> KAI2-like E</p>
-    </div>
-    <div class="viewport-wrapper">
-        <div id="viewport4" class="viewport"></div>
-        <p class="caption"><a href="https://www.rcsb.org/structure/6AZD" target="_blank">6AZD</a> - <i>Physcomitrium patens</i> KAI2-like H</p>
-    </div>
-    <div class="viewport-wrapper">
-        <div id="viewport5" class="viewport"></div>
-        <p class="caption"><a href="https://www.rcsb.org/structure/7TVW" target="_blank">7TVW</a> - <i>Arabidopsis thaliana</i> DLK2</p>
-    </div>
-    <div class="viewport-wrapper">
-        <div id="viewport6" class="viewport"></div>
-        <p class="caption"><a href="https://www.rcsb.org/structure/6AVV" target="_blank">6AVV</a> - <i>Arabidopsis thaliana</i> SOBER1</p>
-    </div>
-    <div class="viewport-wrapper">
-        <div id="viewport8" class="viewport"></div>
-        <p class="caption"><a href="https://www.rcsb.org/structure/6EZS" target="_blank">6EZS</a> - <i>Vibrio harveyi</i> GlcNAcase</p>
-    </div>
-    <div class="viewport-wrapper">
-        <div id="viewport9" class="viewport"></div>
-        <p class="caption"><a href="https://www.rcsb.org/structure/3U0V" target="_blank">3U0V</a> - <i>Homo sapiens</i> LYPLAL1</p>
-    </div>
-</div>
-
-
-
-<script>
-    var currentObject = null; // Variable to store the current WebGL object being zoomed
-
-    function changeRepresentation(type, currentObject, residues) {
-        if (currentObject) {
-            currentObject.removeAllRepresentations();
-            currentObject.addRepresentation(type, {colorScheme: 'sstruc'});
-            currentObject.addRepresentation('ball+stick', {sele: `(${residues}) and not (.C or .O or .N)`});
-            setTimeout(() => currentObject.autoView(), 100); // Introduce a delay before autoView
-        }
-    }
-
-    document.addEventListener("DOMContentLoaded", function() {
-        var stages = [];
-
-        function createStage(id, filename, residues) {
-            var stage = new NGL.Stage(id, {backgroundColor: "#FEFEFA"});
-            stage.loadFile(filename).then(function(o) {
-                o.addRepresentation("cartoon", {colorScheme: 'sstruc'});
-                o.addRepresentation('ball+stick', {sele: `(${residues}) and not (.C or .O or .N)`});
-                o.autoView();
-                stages.push({id: id, stage: stage, object: o});
-            });
-        }
-
-        createStage("viewport1", "7uoc.pdb", '96 or 218 or 247');
-        createStage("viewport2", "6atx.pdb", '98 or 220 or 249');
-        createStage("viewport3", "6azb.pdb", '97 or 219 or 248');
-        createStage("viewport4", "6azd.pdb", '98 or 220 or 249');
-        createStage("viewport5", "7tvw.pdb", '102 or 223 or 253');
-        createStage("viewport6", "6avv.pdb", '106 or 160 or 192');
-        createStage("viewport8", "6ezs.pdb", '274 or 530 or 532 or 584 or NAG');
-        createStage("viewport9", "3u0v.pdb", '124 or 179 or 211');
-
-        function handleTouchZoom(stage, event) {
-            if (event.touches.length === 2) {
-                // Check if the touch event's target is one of the stage's canvas
-                stages.forEach(function(stageObj) {
-                    if (event.target === stageObj.stage.viewer.renderer.domElement) {
-                        currentObject = stageObj.object;
-                        var touch1 = event.touches[0];
-                        var touch2 = event.touches[1];
-                        var distance = Math.sqrt(
-                            Math.pow(touch2.clientX - touch1.clientX, 2) +
-                            Math.pow(touch2.clientY - touch1.clientY, 2)
-                        );
-                        stageObj.stage.viewerControls.zoom(distance);
-                    }
-                });
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
             }
         }
-
-        // Add touch event listeners to each WebGL element
-        stages.forEach(function(stageObj) {
-            var element = document.getElementById(stageObj.id);
-            element.addEventListener("touchstart", function(event) {
-                event.preventDefault();
-                handleTouchZoom(stageObj.stage, event);
-            });
-            element.addEventListener("touchmove", function(event) {
-                event.preventDefault();
-                handleTouchZoom(stageObj.stage, event);
-            });
-        });
-    });
-</script>
-
-
-
+    </script>
 </body>
 </html>
