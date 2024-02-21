@@ -128,7 +128,7 @@
             </p>
         </div>
         <div class="viewport-wrapper">
-            <div id="viewport5" class="viewport"></div>
+            <div id="viewport2" class="viewport"></div>
             <p class="caption">
                 <a href="https://www.rcsb.org/structure/7TVW" target="_blank">7TVW</a> - <i>Arabidopsis thaliana</i> DLK2
             </p>
@@ -148,7 +148,7 @@
             </p>
         </div>
         <div class="viewport-wrapper">
-            <div id="viewport6" class="viewport"></div>
+            <div id="viewport4" class="viewport"></div>
             <p class="caption">
                 <a href="https://www.rcsb.org/structure/6AVV" target="_blank">6AVV</a> - <i>Arabidopsis thaliana</i> SOBER1
             </p>
@@ -158,7 +158,7 @@
             </p>
         </div>
         <div class="viewport-wrapper">
-            <div id="viewport8" class="viewport"></div>
+            <div id="viewport5" class="viewport"></div>
             <p class="caption">
                 <a href="https://www.rcsb.org/structure/6EZS" target="_blank">6EZS</a> - <i>Vibrio harveyi</i> GlcNAcase
             </p>
@@ -168,7 +168,7 @@
             </p>
         </div>
         <div class="viewport-wrapper">
-            <div id="viewport9" class="viewport"></div>
+            <div id="viewport6" class="viewport"></div>
             <p class="caption">
                 <a href="https://www.rcsb.org/structure/4QAM" target="_blank">4QAM</a> - <i>Homo sapiens</i> RPGRIP1
             </p>
@@ -178,7 +178,7 @@
             </p>
         </div>
         <div class="viewport-wrapper">
-            <div id="viewport9" class="viewport"></div>
+            <div id="viewport7" class="viewport"></div>
             <p class="caption">
                 <a href="https://www.rcsb.org/structure/3U0V" target="_blank">3U0V</a> - <i>Homo sapiens</i> LYPLAL1
             </p>
@@ -190,14 +190,62 @@
     </div>
 
     <script>
-        function toggleMenu() {
-            var menu = document.getElementById("menu");
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-            } else {
-                menu.style.display = "block";
+        var currentObject1, currentObject2, currentObject3, currentObject4;
+
+        function changeRepresentation(type, currentObject, residues) {
+            if (currentObject) {
+                currentObject.removeAllRepresentations();
+                currentObject.addRepresentation(type, {colorScheme: 'sstruc'});
+                currentObject.addRepresentation('ball+stick', {sele: `(${residues}) and not (.C or .O or .N)`});
+                setTimeout(() => currentObject.autoView(), 100); // Introduce a delay before autoView
             }
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var stage1 = new NGL.Stage("viewport1", {backgroundColor: "#FEFEFA"});
+            stage1.loadFile("7uoc.pdb").then(function(o) {
+                currentObject1 = o;
+                changeRepresentation("cartoon", currentObject1, '96 or 218 or 247');
+            });
+			
+            var stage2 = new NGL.Stage("viewport2", {backgroundColor: "#FEFEFA"});
+            stage2.loadFile("7tvw.pdb").then(function(o) {
+                currentObject2 = o;
+                changeRepresentation("cartoon", currentObject2, '102 or 223 or 253');
+            });
+			
+            var stage3 = new NGL.Stage("viewport3", {backgroundColor: "#FEFEFA"});
+            stage3.loadFile("6azb.pdb").then(function(o) {
+                currentObject3 = o;
+                changeRepresentation("cartoon", currentObject3, '97 or 219 or 248');
+            });
+			
+            var stage4 = new NGL.Stage("viewport4", {backgroundColor: "#FEFEFA"});
+            stage4.loadFile("6avv.pdb").then(function(o) {
+                currentObject4 = o;
+                changeRepresentation("cartoon", currentObject4, '106 or 160 or 192');
+            });
+			
+            var stage5 = new NGL.Stage("viewport5", {backgroundColor: "#FEFEFA"});
+            stage5.loadFile("6ezs.pdb").then(function(o) {
+                currentObject5 = o;
+                changeRepresentation("cartoon", currentObject5, '274 or 530 or 532 or 584 or NAG');
+            });
+
+            var stage6 = new NGL.Stage("viewport6", {backgroundColor: "#FEFEFA"});
+            stage6.loadFile("4qam.pdb").then(function(o) {
+                currentObject6 = o;
+                changeRepresentation("cartoon");
+            });
+            
+            var stage7 = new NGL.Stage("viewport7", {backgroundColor: "#FEFEFA"});
+            stage7.loadFile("3u0v.pdb").then(function(o) {
+                currentObject7 = o;
+                changeRepresentation("cartoon", currentObject7, '124 or 179 or 211');
+            });
+                        
+        });
     </script>
 </body>
 </html>
+
