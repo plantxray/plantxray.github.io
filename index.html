@@ -8,6 +8,7 @@
 <style>
   /* General styles */
   body, html {
+position: relative; /* Add this line if necessary */
     font-family: 'Roboto', Arial, sans-serif;
     height: 100%;
     margin: 0;
@@ -19,24 +20,46 @@
     text-align: center;
   }
 
- /* Logo styling */
-.logo {
-  margin-top: 20px;
-  margin-bottom: 20px; /* Adjust this value to increase space below the logo */
-  width: 200px;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    top: 0;
+    z-index: 1; /* Ensure slideshow is behind content */
+  }
 
-/* Adjusting the top margin of the h2 tag to increase space */
-h2 {
-  font-size: 28px;
-  color: #C7171A;
-  margin-top: 30px; /* Increase this value to add more space above the h2 */
-  margin-bottom: 5px;
-}
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 5s;
+  }
+  @keyframes fade {
+    from {opacity: .3} 
+    to {opacity: 1}
+  }
+
+/* CSS for logo */
+  .logo {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Adjusting the top margin of the h2 tag to increase space */
+  h2 {
+    font-size: 28px;
+    color: #C7171A;
+    margin-top: 60px; /* Increase this value to add more space above the h2 */
+    margin-bottom: 5px;
+  }
 
   /* Navigation Links */
   .nav-links {
@@ -64,11 +87,10 @@ h2 {
     margin-right: 10px;
   }
 
-.nav-links a:hover {
+  .nav-links a:hover {
     text-decoration: none; /* Disable the underline */
     color: #1D2951; /* Change text color */
-}
-
+  }
 
   /* About Me Section Styles */
   .about-me {
@@ -85,12 +107,6 @@ h2 {
     min-width: 300px;
   }
 
-  h2 {
-    font-size: 28px;
-    color: #C7171A;
-    margin: 5px 0;
-  }
-
   .highlight {
     font-weight: bold; /* Ensure this text remains bold */
     color: black;
@@ -104,8 +120,8 @@ h2 {
     font-size: 20px;
     margin: 2px 0; /* Adjusted spacing */
   }
-  
-    .section-divider {
+
+  .section-divider {
     width: 50%;
     height: 1px;
     background-color: #ccc;
@@ -115,24 +131,26 @@ h2 {
   p {
     margin: 5px 0; /* Default spacing for other paragraphs */
   }
+
+  .social-links {
+    margin: 20px 0;
+  }
   
-         .social-links {
-            margin: 20px 0;
-        }
-        .social-links img {
+  .social-links img {
     width: auto;
     height: 30px;
-            vertical-align: middle;
-            margin-right: 8px;
-        }
-        .social-links a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            display: inline-flex;
-            align-items: center;
-        }
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+  
+  .social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+  }
 
   /* Form Styles */
   #fs-frm {
@@ -156,7 +174,7 @@ h2 {
 
   #fs-frm fieldset {
     border: none; /* Remove any default fieldset border */
-  }
+	}
 
   #fs-frm label {
     color: black;
@@ -190,6 +208,21 @@ h2 {
 </head>
 <body>
 
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="Cb1.jpg" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <img src="Cb2.jpg" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <img src="Cb3.jpg" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <img src="Cb4.jpg" style="width:100%">
+  </div>
+</div>
+
 <img src="plantxray_logo_2.png" alt="Plant X-Ray Logo" class="logo">
 <h2>Marco Burger, PhD</h2>
 
@@ -216,9 +249,9 @@ h2 {
 <hr>
 <p>Happy to connect. Please leave a message.</p>
 <div class="social-links">
-    <a href="https://twitter.com/plantxray" target="_blank"><img src="x_logo.png" /></a>
-    <a href="https://www.researchgate.net/profile/Marco_Buerger" target="_blank"><img src="researchgate_logo.png" /></a>
-    <a href="https://scholar.google.com/citations?hl=en&user=U40TV3cAAAAJ&view_op=list_works&sortby=pubdate" target="_blank"><img src="google-scholar_logo.png" /></a>
+    <a href="https://twitter.com/plantxray" target="_blank"><img src="x_logo.png"></a>
+    <a href="https://www.researchgate.net/profile/Marco_Buerger" target="_blank"><img src="researchgate_logo.png"></a>
+    <a href="https://scholar.google.com/citations?hl=en&user=U40TV3cAAAAJ&view_op=list_works&sortby=pubdate" target="_blank"><img src="google-scholar_logo.png"></a>
 </div>
 <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mvoeallk" method="post">
   <fieldset>
@@ -230,6 +263,54 @@ h2 {
     <textarea rows="5" name="message" id="message" placeholder="" required></textarea>
     <input type="hidden" name="_subject" value="Contact Form Submission">
   </fieldset>
-  <input type="submit" value="Submit">
+    <input type="submit" value="Submit">
 </form>
 
+</style>
+
+<script>
+let slideIndex = 0;
+carousel();
+
+function carousel() {
+    let slides = document.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(() => { slides[slideIndex-1].style.opacity = 1; }, 10);
+    setTimeout(carousel, 6000); // Change image every 6 seconds
+}
+
+window.onload = () => {
+    adjustLogoAndContentPosition();
+    window.addEventListener('resize', adjustLogoAndContentPosition);
+};
+
+function adjustLogoAndContentPosition() {
+    const slideshow = document.querySelector('.slideshow-container');
+    const logo = document.querySelector('.logo');
+    const contentFollowingLogo = document.querySelector('h2'); // This targets the "Marco Burger, PhD" heading.
+    if (slideshow && logo && contentFollowingLogo) {
+        const slideshowHeight = slideshow.offsetHeight;
+        logo.style.width = `auto`; // Maintain aspect ratio
+        logo.style.height = `${slideshowHeight * 0.8}px`; // 80% of the slideshow height
+        const logoHeight = logo.offsetHeight;
+        const logoPositionOffset = logoHeight * (3 / 4);
+        logo.style.top = `${slideshow.getBoundingClientRect().top + window.scrollY + slideshowHeight - logoPositionOffset}px`;
+        logo.style.transform = 'translateX(-50%)'; // Adjust only horizontally
+
+        // Calculate dynamic additional space based on a percentage of the logo's height
+        const dynamicSpacePercentage = 0.1; // Example: 10% of the logo's height
+        const dynamicExtraSpace = logoHeight * dynamicSpacePercentage;
+
+        // Calculate the total space needed, including the dynamic extra space
+        const totalSpaceNeeded = (logoHeight - logoPositionOffset) + dynamicExtraSpace;
+        contentFollowingLogo.style.marginTop = `${totalSpaceNeeded}px`;
+    }
+}
+</script>
+</body>
+</html>
