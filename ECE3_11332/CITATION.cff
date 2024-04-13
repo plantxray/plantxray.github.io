@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this data or software, please cite it as below."
+title: "A potential role of heat-moisture couplings in the range expansion of Striga asiatica"
+authors:
+  - family-names: "Bürger"
+    given-names: "Marco"
+  - family-names: "Chory"
+    given-names: "Joanne"
+version: 1.0.0
+date-released: 2021-07-26
+journal: "Ecology and Evolution"
+publisher: "Wiley"
+doi: "10.1002/ECE3.11332"
