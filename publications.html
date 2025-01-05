@@ -25,14 +25,14 @@
         }
         .logo-container {
             display: flex;
-            justify-content: space-between; /* Adjusted to space-between to move the logo to the right */
+            justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
         }
         .logo {
             width: 75px;
             height: auto;
-			margin-right: 5px; /* Adjusted to right for consistency */
+			margin-right: 5px;
             margin-top: 5px;
         }
 h1 {
@@ -47,10 +47,8 @@ h1 {
     background: linear-gradient(to right, #FF6347, #C40234); 
     border-radius: 10px;
     z-index: -1;
-    text-align: center; /* Add this line to center the text */
-
-
-        }
+    text-align: center;
+}
         .container {
             display: flex;
             flex-wrap: wrap;
@@ -58,8 +56,8 @@ h1 {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem 1rem;
-			}
-			.column {
+		}
+		.column {
 			flex: 1;
 			padding: 1rem;
 			box-sizing: border-box;
@@ -68,126 +66,132 @@ h1 {
 			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 			border-radius: 4px;
 			margin: 1rem;
-			}
-			.column1 {
+		}
+		.column1 {
 			background-color: #AFDBF5; 
-			}
-			
-			.column2 {
+		}
+		.column2 {
 			background-color: #D0F0C0; 
-			}
-			
-			.column3 {
+		}
+		.column3 {
 			background-color: #EDC9AF; 
-			}
-			h2 {
+		}
+		h2 {
 			font-size: 1.6rem;
 			font-weight: 500;
 			color: #333;
 			margin-bottom: 1.5rem;
 			text-align: center;
-			}
-			.publication {
+		}
+		.publication {
 			margin-bottom: 2rem;
-			}
-			.title {
+		}
+		.summary {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 0.3em;
+            margin-bottom: 1em;
+            line-height: 1.4;
+        }
+		.title {
 			font-size: 1.2rem;
 			font-weight: bold;
 			color: #333;
-			}
-			.author {
+		}
+		.author {
 			color: #555;
-			}
-			.journal {
+		}
+		.journal {
 			font-style: italic;
 			color: black;
-			}
-			.doi {
+		}
+		.doi {
 			color: #0018A8;
 			text-decoration: none;
-			}
-			.doi a {
+		}
+		.doi a {
 			color: #0018A8;
 			text-decoration: none;
-			}
-			.doi a:hover {
+		}
+		.doi a:hover {
 			text-decoration: underline;
-			}
-			.underline {
+		}
+		.underline {
 			text-decoration: underline;
-			}
-			.publication {
+		}
+		.publication {
 			border-bottom: 1px solid #FFFFFF;
 			padding-bottom: 10px;
 			margin-bottom: 10px;
-			}
-			
-			.publication:last-child {
+		}
+		.publication:last-child {
 			border-bottom: none;
-			}
+		}
 		.movie {
-  text-align: center;
-}
-
-.movie video {
-  display: inline-block;
-}
-.video-abstract {
-  font-size: 0.8em; /* Adjust the font size as needed */
-  margin-top: 0.0em; /* Adjust the margin-top to control the space between the video and the text */
-  text-align: center; /* Center the text */
-  display: block; /* Make the paragraph behave like a block element */
-  color: #555
-}
-.structure-link {
-color: #C40234;
-}
-			.structure-link a {
-			color: #C40234;
-			text-decoration: none;
-			}
-			.structure-link a:hover {
-			text-decoration: underline;
-			}
-			
-.code-link {
-color: #b05f00;
-}
-			.code-link a {
-			color: #b05f00;
-			text-decoration: none;
-			}
-			.code-link a:hover {
-			text-decoration: underline;
-			}
-			
-.medium-weight {
-    font-weight: 500; /* Medium font weight */
-}
-
-        /* Menu styles */
-#menu {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    margin-top: 20px; /* Adjust as needed for positioning */
-    z-index: 1000;
-	text-align: left;
-}
-
-#menu a {
-    font-size: 30px; /* Increase font size for links */
-    color: #333; /* Change the color if needed */
-    text-decoration: none; /* Removes underline from links */
-}
-
-.menu-btn {
-    font-size: 40px; /* Adjusts only the hamburger icon size */
-    cursor: pointer;
-}
-
+            text-align: center;
+        }
+        .movie video {
+            display: inline-block;
+        }
+        .video-abstract {
+            font-size: 0.8em;
+            margin-top: 0.0em;
+            text-align: center;
+            display: block;
+            color: #555
+        }
+        .structure-link {
+            color: #C40234;
+        }
+        .structure-link a {
+            color: #C40234;
+            text-decoration: none;
+        }
+        .structure-link a:hover {
+            text-decoration: underline;
+        }
+        .genome-link {
+            color: #800080;
+        }
+        .genome-link a {
+            color: #800080;
+            text-decoration: none;
+        }
+        .genome-link a:hover {
+            text-decoration: underline;
+        }
+        .code-link {
+            color: #b05f00;
+        }
+        .code-link a {
+            color: #b05f00;
+            text-decoration: none;
+        }
+        .code-link a:hover {
+            text-decoration: underline;
+        }
+        .medium-weight {
+            font-weight: 500;
+        }
+        #menu {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            margin-top: 20px;
+            z-index: 1000;
+            text-align: left;
+        }
+        #menu a {
+            font-size: 30px;
+            color: #333;
+            text-decoration: none;
+        }
+        .menu-btn {
+            font-size: 40px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -196,46 +200,38 @@ color: #b05f00;
         <img class="logo" src="plantxray_logo_2.png" alt="logo">
     </div>
     <h1>PUBLICATIONS</h1>
-    <!-- Hidden Menu -->
     <div id="menu">
         <a href="index.html">Home</a><br>
         <a href="publications.html">Publications</a><br>
         <a href="structures.html">Structure Gallery</a>
     </div>
 
-    <script>
-function toggleMenu() {
-    var menu = document.getElementById("menu");
-    // Check if menu.style.display is "block", implying the menu is already open.
-    // Otherwise, treat it as if it needs to be shown (covers both "none" and "" cases).
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
-    }
-}
-
-    </script>
-</body>
-</html>
-	<body>
-		<div class="container">
-			<div class="column column1">
-				<h2>Research papers</h2>
-				<div class="publication">
-				<p class="title">Strigolactones Initiate the Formation of Haustorium-like Structures in <i>Castilleja</i></p>
-				<p class="author"><span class="underline">Bürger, M.</span>, Peterson, D., Chory, J.</p>
-				<p class="journal">iScience, 2024</p>
-				<p class="doi">
-				<span class="medium-weight">Read the paper:</span><br>
-				<a href="https://doi.org/10.1016/j.isci.2024.111491" target="_blank">https://doi.org/10.1016/j.isci.2024.111491</a></p>
-				<p class="structure-link">
-    <span class="medium-weight">Get the structure:</span><br>
-                <a href="https://www.rcsb.org/structure/8TMX" target="_blank">8TMX - <i>Castilleja foliolosa</i> KAI2d15</a><br>
-				<span class="__dimensions_badge_embed__" data-doi="10.1016/j.isci.2024.111491" data-hide-zero-citations="true" data-style="small_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script><p>
-				</div>
-				<div class="publication">
+    <div class="container">
+        <div class="column column1">
+            <h2>Research papers</h2>
+<div class="publication">
+                <p class="title">Strigolactones Initiate the Formation of Haustorium-like Structures in <i>Castilleja</i></p>
+                <p class="summary">Strigolactones alter normal root development in <i>Castilleja</i> seedlings and induce the formation of haustorium-like structures.</p>
+                <p class="author"><span class="underline">Bürger, M.</span>, Peterson, D., Chory, J.</p>
+                <p class="journal">iScience, 2024</p>
+                <p class="doi">
+                    <span class="medium-weight">Read the paper:</span><br>
+                    <a href="https://doi.org/10.1016/j.isci.2024.111491" target="_blank">https://doi.org/10.1016/j.isci.2024.111491</a>
+                </p>
+                <p class="genome-link">
+                    <span class="medium-weight">Download the genome:</span><br>
+                    <a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_046119335.1/" target="_blank"><i>Castilleja foliolosa</i></a>
+                </p>
+                <p class="structure-link">
+                    <span class="medium-weight">Get the structure:</span><br>
+                    <a href="https://www.rcsb.org/structure/8TMX" target="_blank">8TMX - <i>Castilleja foliolosa</i> KAI2d15</a>
+                </p>
+                <span class="__dimensions_badge_embed__" data-doi="10.1016/j.isci.2024.111491" data-hide-zero-citations="true" data-style="small_rectangle"></span>
+                <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+            </div>
+<div class="publication">
 				<p class="title">Identification Challenges of <i>Castilleja</i> (Orobanchaceae) on iNaturalist</p>
+                <p class="summary">Analysis of more than 100,000 iNaturalist observations reveals substantial identification challenges for <i>Castilleja</i> species, with most frequent confusion between <i>C. densiflora</i> and <i>C. exserta</i>.</p>
 				<p class="author"><span class="underline">Bürger, M.</span>, Chory, J.</p>
 				<p class="journal">PLoS One, 2024</p>
 				<p class="doi">
@@ -243,7 +239,7 @@ function toggleMenu() {
 				<a href="https://doi.org/10.1371/journal.pone.0311088" target="_blank">https://doi.org/10.1371/journal.pone.0311088</a></p>
 				<p class="code-link">
     <span class="medium-weight">Get the code:</span><br>
-                <a href="https://github.com/plantxray/PONE-D-24-17944" target="_blank">PONE-D-24-17944</a><p>
+                <a href="https://github.com/plantxray/PONE-D-24-17944" target="_blank">PONE-D-24-17944</a></p>
 				<span class="__dimensions_badge_embed__" data-doi="10.1371/journal.pone.0311088" data-hide-zero-citations="true" data-style="small_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
 				</div>
 				<div class="publication">
@@ -255,8 +251,9 @@ function toggleMenu() {
 				<a href="https://doi.org/10.1093/jxb/erae365" target="_blank">https://doi.org/10.1093/jxb/erae365</a></p>
 				<span class="__dimensions_badge_embed__" data-doi="10.1093/jxb/erae365" data-hide-zero-citations="true" data-style="small_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
 				</div>
-				<div class="publication">
+<div class="publication">
 				<p class="title">A Potential Role of Heat-Moisture Couplings in the Range Expansion of <i>Striga asiatica</i></p>
+                <p class="summary">Analysis of geographic and environmental data reveals that <i>Striga asiatica</i> is expanding into high-altitude regions, driven by a combination of higher temperatures and soil moisture.</p>
 				<p class="author"><span class="underline">Bürger, M.</span>, Chory, J.</p>
 				<p class="journal">Ecol Evol, 2024</p>
 				<p class="doi">
@@ -264,11 +261,12 @@ function toggleMenu() {
 				<a href="https://doi.org/10.1002/ece3.11332" target="_blank">https://doi.org/10.1002/ece3.11332</a></p>
 				<p class="code-link">
     <span class="medium-weight">Get the code:</span><br>
-                <a href="https://github.com/plantxray/plantxray.github.io/tree/main/ECE3_11332" target="_blank">ECE3_11332</a><p>
+                <a href="https://github.com/plantxray/plantxray.github.io/tree/main/ECE3_11332" target="_blank">ECE3_11332</a></p>
 				<span class="__dimensions_badge_embed__" data-doi="10.1002/ece3.11332" data-hide-zero-citations="true" data-style="small_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
-				</div>
-				<div class="publication">
+</div>
+<div class="publication">
 				<p class="title">A Divergent Clade KAI2 Protein in the Root Parasitic Plant <i>Orobanche minor</i> Is a Highly Sensitive Strigolactone Receptor and Is Involved in the Perception of Sesquiterpene Lactones</p>
+                <p class="summary"><i>O. minor</i> KAI2d3 and KAI2d4 proteins function as strigolactone receptors, with KAI2d3 showing high sensitivity and both proteins having the ability to recognize structurally diverse ligands including sesquiterpene lactones.</p>
 					<div class="movie">
 						<video width="240" height="427" controls>
 							<source src="OmKAI2d4_v5.mp4" type="video/mp4">
@@ -282,27 +280,31 @@ function toggleMenu() {
 					<a href="https://doi.org/10.1093/pcp/pcad026" target="_blank">https://doi.org/10.1093/pcp/pcad026</a></p>
 					<p class="structure-link">
     <span class="medium-weight">Get the structure:</span><br>
-                <a href="https://www.rcsb.org/structure/7UOC" target="_blank">7UOC - <i>Orobanche minor</i> KAI2d4</a><p>
+                <a href="https://www.rcsb.org/structure/7UOC" target="_blank">7UOC - <i>Orobanche minor</i> KAI2d4</a></p>
 				<span class="__dimensions_badge_embed__" data-doi="10.1093/pcp/pcad026" data-hide-zero-citations="true" data-style="small_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
-				</div>
-				<div class="publication">
-					<p class="title">Crystal Structure of <i>Arabidopsis</i> DWARF14-LIKE2 (DLK2) Reveals a Distinct Substrate Binding Pocket Architecture</p>
-					<div class="movie">
-						<video width="240" height="427" controls>
-							<source src="DLK2_v2.mp4" type="video/mp4">
-							Your browser does not support the video tag.
-						</video>
-					<p class="video-abstract">Video abstract</p>
-					</div>			<p class="author"><span class="underline">Bürger, M.</span>, Honda, K., Kondoh, Y., Hong, S., Watanabe, N., Osada, H., Chory, J.</p>
-					<p class="journal">Plant Direct, 2022</p>
-					<p class="doi">
-					<span class="medium-weight">Read the paper:</span><br>
-					<a href="https://doi.org/10.1002/pld3.446" target="_blank">https://doi.org/10.1002/pld3.446</a></p>
-					<p class="structure-link">
-    <span class="medium-weight">Get the structure:</span><br>
-                <a href="https://www.rcsb.org/structure/7TVW" target="_blank">7TVW - <i>Arabidopsis thaliana</i> DLK2</a><p>
-				<span class="__dimensions_badge_embed__" data-doi="10.1002/pld3.446" data-hide-zero-citations="true" data-style="small_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script><p>
-				</div>
+</div>
+<div class="publication">
+    <p class="title">Crystal Structure of <i>Arabidopsis</i> DWARF14-LIKE2 (DLK2) Reveals a Distinct Substrate Binding Pocket Architecture</p>
+    <p class="summary">DLK2 has a substrate binding pocket that is much smaller than in its paralogs D14 and KAI2, precluding binding of strigolactones. Through chemical screening, a pyrrolo-quinoline-dione compound was identified as a specific DLK2 inhibitor.</p>
+    <div class="movie">
+        <video width="240" height="427" controls>
+            <source src="DLK2_v2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="video-abstract">Video abstract</p>
+    </div>
+    <p class="author"><span class="underline">Bürger, M.</span>, Honda, K., Kondoh, Y., Hong, S., Watanabe, N., Osada, H., Chory, J.</p>
+    <p class="journal">Plant Direct, 2022</p>
+    <p class="doi">
+        <span class="medium-weight">Read the paper:</span><br>
+        <a href="https://doi.org/10.1002/pld3.446" target="_blank">https://doi.org/10.1002/pld3.446</a>
+    </p>
+    <p class="structure-link">
+        <span class="medium-weight">Get the structure:</span><br>
+        <a href="https://www.rcsb.org/structure/7TVW" target="_blank">7TVW - <i>Arabidopsis thaliana</i> DLK2</a>
+    </p>
+    <span class="__dimensions_badge_embed__" data-doi="10.1002/pld3.446" data-hide-zero-citations="true" data-style="small_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+</div>
 				<div class="publication">
 				<p class="title">Structural Basis of Chitin Utilization by a GH20 Beta-N-Acetylglucosaminidase from <i>Vibrio campbellii</i> Strain ATCC BAA-1116</p>
 					<p class="author">Meekrathok, P., <span class="underline">Bürger, M.</span>, Porfetye, A. T., Kumsaoad, S., Aunkham, A., Vetter, I. R., Suginta, W.</p>
@@ -324,30 +326,35 @@ function toggleMenu() {
 				<a href="https://doi.org/10.1093/plcell/koaa026" target="_blank">https://doi.org/10.1093/plcell/koaa026</a></p>
 				<span class="__dimensions_badge_embed__" data-doi="10.1093/plcell/koaa026" data-style="small_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script><p>
 				</div>
-				<div class="publication">
-				<p class="title">In-Silico Analysis of the Strigolactone Ligand-Receptor System</p>
-				<p class="author"><span class="underline">Bürger, M.</span>, Chory, J.</p>
-				<p class="journal">Plant Direct, 2020</p>
-				<p class="doi">
-				<span class="medium-weight">Read the paper:</span><br>
-				<a href="https://doi.org/10.1002/pld3.263" target="_blank">https://doi.org/10.1002/pld3.263</a></p>
-				<span class="__dimensions_badge_embed__" data-doi="10.1002/pld3.263" data-style="small_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script><p>
-				</div>
-				<div class="publication">
-				<p class="title">Structural Basis of Karrikin and Non-natural Strigolactone Perception in <i>Physcomitrella patens</i></p>
-				<p class="author"><span class="underline">Bürger, M.</span>, Mashiguchi, K., Lee, H. J., Nakano, M., Takemoto, K., Seto, Y., Yamaguchi, S., Chory, J.</p>
-				<p class="journal">Cell Rep, 2019</p>
-				<p class="doi">
-				<span class="medium-weight">Read the paper:</span><br>
-				<a href="https://doi.org/10.1016/j.celrep.2019.01.003" target="_blank">https://doi.org/10.1016/j.celrep.2019.01.003</a></p>
-				<p class="structure-link">
-    <span class="medium-weight">Get the structures:</span><br>
-                <a href="https://www.rcsb.org/structure/6AVV" target="_blank">6AVV - <i>Arabidopsis thaliana</i> SOBER1</a><br>
-				<a href="https://www.rcsb.org/structure/6AVW" target="_blank">6AVW - <i>Arabidopsis thaliana</i> SOBER1 L63A</a><br>
-				<a href="https://www.rcsb.org/structure/6AVX" target="_blank">6AVX - <i>Arabidopsis thaliana</i> SOBER1 F65L</a><br>
-				<a href="https://www.rcsb.org/structure/6AVY" target="_blank">6AVY - <i>Zea mays</i> APT2</a><p>
-				<span class="__dimensions_badge_embed__" data-doi="10.1016/j.celrep.2019.01.003" data-style="small_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script><p>
-				</div>
+<div class="publication">
+    <p class="title">In-Silico Analysis of the Strigolactone Ligand-Receptor System</p>
+    <p class="summary">Computational analysis of strigolactone receptor binding pockets reveals that narrow bottlenecks act as size filters for ligands, while the active site plays a crucial role in ligand orientation.</p>
+    <p class="author"><span class="underline">Bürger, M.</span>, Chory, J.</p>
+    <p class="journal">Plant Direct, 2020</p>
+    <p class="doi">
+        <span class="medium-weight">Read the paper:</span><br>
+        <a href="https://doi.org/10.1002/pld3.263" target="_blank">https://doi.org/10.1002/pld3.263</a>
+    </p>
+    <span class="__dimensions_badge_embed__" data-doi="10.1002/pld3.263" data-hide-zero-citations="true" data-style="small_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+</div>
+<div class="publication">
+    <p class="title">Structural Basis of Karrikin and Non-natural Strigolactone Perception in <i>Physcomitrella patens</i></p>
+<p class="summary">A loop segment in <i>Physcomitrella</i> KAI2-like proteins determines their substrate specificity, with distinct protein groups perceiving either (-)-5-deoxystrigol or karrikin.</p>
+    <p class="author"><span class="underline">Bürger, M.</span>, Mashiguchi, K., Lee, H. J., Nakano, M., Takemoto, K., Seto, Y., Yamaguchi, S., Chory, J.</p>
+    <p class="journal">Cell Rep, 2019</p>
+    <p class="doi">
+        <span class="medium-weight">Read the paper:</span><br>
+        <a href="https://doi.org/10.1016/j.celrep.2019.01.003" target="_blank">https://doi.org/10.1016/j.celrep.2019.01.003</a>
+    </p>
+    <p class="structure-link">
+        <span class="medium-weight">Get the structures:</span><br>
+        <a href="https://www.rcsb.org/structure/6AVV" target="_blank">6AVV - <i>Arabidopsis thaliana</i> SOBER1</a><br>
+        <a href="https://www.rcsb.org/structure/6AVW" target="_blank">6AVW - <i>Arabidopsis thaliana</i> SOBER1 L63A</a><br>
+        <a href="https://www.rcsb.org/structure/6AVX" target="_blank">6AVX - <i>Arabidopsis thaliana</i> SOBER1 F65L</a><br>
+        <a href="https://www.rcsb.org/structure/6AVY" target="_blank">6AVY - <i>Zea mays</i> APT2</a>
+    </p>
+    <span class="__dimensions_badge_embed__" data-doi="10.1016/j.celrep.2019.01.003" data-style="small_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+</div>
 				<div class="publication">
 				<p class="title">A Hydrophobic Anchor Mechanism Defines a Deacetylase Family That Suppresses Host Response Against YopJ Effectors</p>
 				<p class="author"><span class="underline">Bürger, M.</span>, Willige, B. C., Chory, J.</p>
