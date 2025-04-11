@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PLANTXRAY</title>
+<link rel="icon" type="image/png" href="plantxray_logo_2.png">
+<style>
+  /* General styles */
+  body, html {
+    font-family: 'Roboto', Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+ /* Logo styling */
+.logo {
+  margin-top: 20px;
+  margin-bottom: 20px; /* Adjust this value to increase space below the logo */
+  width: 200px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Adjusting the top margin of the h2 tag to increase space */
+h2 {
+  font-size: 28px;
+  color: #C7171A;
+  margin-top: 30px; /* Increase this value to add more space above the h2 */
+  margin-bottom: 5px;
+}
+
+  /* Navigation Links */
+  .nav-links {
+    font-size: 24px;
+    color: #C7171A;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: #C7171A;
+    text-decoration: none;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links img {
+    width: auto;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+
+  /* About Me Section Styles */
+  .about-me {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 40px 20px;
+  }
+
+  .about-me > div {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  h2 {
+    font-size: 28px;
+    color: #C7171A;
+    margin: 5px 0;
+  }
+
+  .highlight {
+    font-weight: bold; /* Ensure this text remains bold */
+    color: black;
+    font-size: 20px;
+    margin: 5px 0;
+  }
+
+  .highlight-special {
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+    margin: 2px 0; /* Adjusted spacing */
+  }
+  
+    .section-divider {
+    width: 50%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px auto;
+  }
+
+  p {
+    margin: 5px 0; /* Default spacing for other paragraphs */
+  }
+
+  /* Form Styles */
+  #fs-frm {
+    max-width: 400px;
+    width: 100%;
+    border: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  #fs-frm input, #fs-frm textarea {
+    color: black;
+    background-color: white;
+    border: none; /* Removed the black border */
+    box-shadow: none; /* Removed any shadow if present */
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #fs-frm fieldset {
+    border: none; /* Remove any default fieldset border */
+  }
+
+  #fs-frm label {
+    color: black;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  #fs-frm [type='submit'] {
+    background-color: #C6CB19;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #fs-frm [type='submit']:hover {
+    background-color: #9D9C1E;
+  }
+  
+  /* Divider Styles */
+  hr {
+    border: 1;
+    height: 1px;
+    background-color: #000; /* Subtle light grey */
+    width: 80%;
+    margin: 20px auto; /* Adjusted for subtlety */
+  }
+</style>
+</head>
+<body>
+
+<img src="plantxray_logo_2.png" alt="Plant X-Ray Logo" class="logo">
+<h2>Marco Burger, PhD</h2>
+
+<div class="about-me">
+  <div>
+    <p class="highlight">Structural Biologist &middot; Biochemist</p>
+    <p>Parasitic Plants &middot; Strigolactone Signaling</p>
+  </div>
+  <div>
+    <p class="highlight-special">Research Specialist II</p>
+    <p>Salk Institute for Biological Studies</p>
+    <p>Howard Hughes Medical Institute (HHMI)</p>
+    <p class="highlight-special">Western Section Representative to Membership Committee and Council</p>
+    <p>American Society of Plant Biologists (ASPB)</p>
+  </div>
+</div>
+
+<div class="nav-links">
+  <a href="publications.html"><img src="books.png" alt="Books Icon">Publications</a>
+  <a href="structures.html"><img src="structure.png" alt="Structure Icon">Structure Gallery</a>
+</div>
+
+<div class="section-divider"></div> <!-- Divider added here -->
+<hr>
+<p>Happy to connect. Please leave a message.</p>
+
+<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mvoeallk" method="post">
+  <fieldset>
+    <label for="full-name">Name</label>
+    <input type="text" name="name" id="full-name" placeholder="" required>
+    <label for="email-address">Email Address</label>
+    <input type="email" name="_replyto" id="email-address" placeholder="" required>
+    <label for="message">Message</label>
+    <textarea rows="5" name="message" id="message" placeholder="" required></textarea>
+    <input type="hidden" name="_subject" value="Contact Form Submission">
+  </fieldset>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
