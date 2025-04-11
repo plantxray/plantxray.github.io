@@ -205,10 +205,34 @@ h1 {
         <a href="publications.html">Publications</a><br>
         <a href="structures.html">Structure Gallery</a>
     </div>
+    <script>
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    // Check if menu.style.display is "block", implying the menu is already open.
+    // Otherwise, treat it as if it needs to be shown (covers both "none" and "" cases).
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
 
+    </script>
     <div class="container">
         <div class="column column1">
             <h2>Research papers</h2>
+<div class="publication">
+    <p class="title">Protocol for Efficient Germination of <i>Castilleja</i> (Orobanchaceae) for Chemical Haustorium Induction and Parasite-Host Interaction Studies</p>
+    <p class="summary">This protocol describes methods for germinating <i>Castilleja</i> seeds and inducing haustorium formation through strigolactone treatment or cocultivation with a host plant</p>
+    <p class="author">Bashyal S, Müller LM, Chory J, <span class="underline">Bürger, M.</span></p>
+    <p class="journal">STAR Protoc, 2025</p>
+    <p class="doi">
+        <span class="medium-weight">Read the paper:</span><br>
+        <a href="https://doi.org/10.1016/j.xpro.2025.103753" target="_blank">https://doi.org/10.1016/j.xpro.2025.103753</a>
+    </p>
+    <span class="__dimensions_badge_embed__" data-doi="10.1016/j.xpro.2025.103753" data-hide-zero-citations="true" data-style="small_rectangle"></span>
+    <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+</div>
 <div class="publication">
     <p class="title">Microbes and Metabolites of a Plant-Parasite Interaction: Deciphering the Ecology of <i>Tetrastigma</i> Host Choice in the World's Largest Parasitic Flower, <i>Rafflesia</i></p>
     <p class="summary">Microbial communities and their metabolites may shape the chemical environment for <i>Rafflesia</i> development.</p>
