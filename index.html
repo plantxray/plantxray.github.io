@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1245E6F667"></script>
@@ -9,8 +8,7 @@
   gtag('js', new Date());
 
   gtag('config', 'G-1245E6F667');
-</script>
-<meta charset="UTF-8">
+</script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Latest research from Marco Burger on structural biology, biochemistry, parasitic plants, and strigolactone signaling. Explore publications and structure galleries.">
 <meta name="keywords" content="Marco Burger, structural biology, biochemistry, parasitic plants, strigolactone signaling, plant science research, biological studies, plant biology, research publications, structure gallery">
@@ -19,12 +17,12 @@
 <style>
   /* General styles */
   body, html {
-position: relative; /* Add this line if necessary */
+    position: relative;
     font-family: 'Roboto', Arial, sans-serif;
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #fafafa;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,38 +35,40 @@ position: relative; /* Add this line if necessary */
     position: relative;
     margin: auto;
     top: 0;
-    z-index: 1; /* Ensure slideshow is behind content */
+    z-index: 1;
   }
 
-  /* Hide the images by default */
+  /* Stack all slides on top of each other */
   .mySlides {
-    display: none;
-  }
-
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1s;
-  }
-  @keyframes fade {
-    from {opacity: .3} 
-    to {opacity: 1}
-  }
-
-/* CSS for logo */
-  .logo {
     position: absolute;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
+
+  .mySlides.active {
+    opacity: 1;
+  }
+
+  .mySlides:first-child {
+    position: relative;
+  }
+
+  /* CSS for logo */
+  .logo {
+    width: auto;
+    height: 120px;
+    margin: 20px auto;
+    display: block;
   }
 
   /* Adjusting the top margin of the h2 tag to increase space */
   h2 {
     font-size: 28px;
     color: #C7171A;
-    margin-top: 60px; /* Increase this value to add more space above the h2 */
+    margin-top: 60px;
     margin-bottom: 5px;
   }
 
@@ -99,8 +99,8 @@ position: relative; /* Add this line if necessary */
   }
 
   .nav-links a:hover {
-    text-decoration: none; /* Disable the underline */
-    color: #1D2951; /* Change text color */
+    text-decoration: none;
+    color: #1D2951;
   }
 
   /* About Me Section Styles */
@@ -119,7 +119,7 @@ position: relative; /* Add this line if necessary */
   }
 
   .highlight {
-    font-weight: bold; /* Ensure this text remains bold */
+    font-weight: bold;
     color: black;
     font-size: 20px;
     margin: 5px 0;
@@ -129,7 +129,7 @@ position: relative; /* Add this line if necessary */
     font-weight: bold;
     color: black;
     font-size: 20px;
-    margin: 2px 0; /* Adjusted spacing */
+    margin: 2px 0;
   }
 
   .section-divider {
@@ -140,20 +140,20 @@ position: relative; /* Add this line if necessary */
   }
 
   p {
-    margin: 5px 0; /* Default spacing for other paragraphs */
+    margin: 5px 0;
   }
 
   .social-links {
     margin: 20px 0;
   }
-  
+
   .social-links img {
     width: auto;
     height: 30px;
     vertical-align: middle;
     margin-right: 8px;
   }
-  
+
   .social-links a {
     margin: 0 10px;
     text-decoration: none;
@@ -175,8 +175,8 @@ position: relative; /* Add this line if necessary */
   #fs-frm input, #fs-frm textarea {
     color: black;
     background-color: white;
-    border: none; /* Removed the black border */
-    box-shadow: none; /* Removed any shadow if present */
+    border: none;
+    box-shadow: none;
     padding: 8px;
     margin-bottom: 10px;
     width: 100%;
@@ -184,8 +184,8 @@ position: relative; /* Add this line if necessary */
   }
 
   #fs-frm fieldset {
-    border: none; /* Remove any default fieldset border */
-	}
+    border: none;
+  }
 
   #fs-frm label {
     color: black;
@@ -206,48 +206,47 @@ position: relative; /* Add this line if necessary */
   #fs-frm [type='submit']:hover {
     background-color: #9D9C1E;
   }
-  
+
   /* Divider Styles */
   hr {
     border: 1;
     height: 1px;
-    background-color: #000; /* Subtle light grey */
+    background-color: #000;
     width: 80%;
-    margin: 20px auto; /* Adjusted for subtlety */
+    margin: 20px auto;
   }
-</style>
-</head>
+</style></head>
 <body>
 
 <div class="slideshow-container">
-  <div class="mySlides fade">
+  <div class="mySlides active">
     <img src="Cb1.jpg" style="width:100%" alt="Castilleja foliolosa (Woolly Indian Paintbrush)">
   </div>
-  <div class="mySlides fade">
+  <div class="mySlides">
     <img src="Cb2.jpg" style="width:100%" alt="Castilleja affinis (Coast Paintbrush)">
   </div>
-  <div class="mySlides fade">
+  <div class="mySlides">
     <img src="Cb3.jpg" style="width:100%" alt="Castilleja wightii (Wight's Paintbrush)">
   </div>
-  <div class="mySlides fade">
+  <div class="mySlides">
     <img src="Cb4.jpg" style="width:100%" alt="Castilleja exserta (Purple Owl's-Clover)">
   </div>
-  <div class="mySlides fade">
+  <div class="mySlides">
     <img src="Cb5.jpg" style="width:100%" alt="Castilleja martini (Camp Martin Paintbrush)">
   </div>
-  <div class="mySlides fade">
+  <div class="mySlides">
     <img src="Cb6.jpg" style="width:100%" alt="Castilleja miniata (Giant Red Indian Paintbrush">
   </div>
-  <div class="mySlides fade">
+  <div class="mySlides">
     <img src="Cb7.jpg" style="width:100%" alt="Castilleja hololeuca (Island Paintbrush">
   </div>
-  <div class="mySlides fade">
+  <div class="mySlides">
     <img src="Cb8.jpg" style="width:100%" alt="Castilleja affinis (Coast Paintbrush">
   </div>
 </div>
 
-<img src="plantxray_logo_2.png" alt="Plant X-Ray Logo" class="logo">
 <h2>Marco Burger, PhD</h2>
+<img src="plantxray_logo_2.png" alt="Plant X-Ray Logo" class="logo">
 
 <div class="about-me">
   <div>
@@ -266,9 +265,10 @@ position: relative; /* Add this line if necessary */
 <div class="nav-links">
   <a href="publications.html"><img src="books.png" alt="Books Icon">Publications</a>
   <a href="structures.html"><img src="structure.png" alt="Structure Icon">Structure Gallery</a>
+  <a href="genomes.html"><img src="dna.png" alt="Genomes Icon">Genomes</a>
 </div>
 
-<div class="section-divider"></div> <!-- Divider added here -->
+<div class="section-divider"></div>
 <hr>
 <p>Happy to connect. Please leave a message.</p>
 <div class="social-links">
@@ -289,23 +289,29 @@ position: relative; /* Add this line if necessary */
     <input type="submit" value="Submit">
 </form>
 
-</style>
-
 <script>
 let slideIndex = 0;
-carousel();
+const slides = document.getElementsByClassName("mySlides");
 
 function carousel() {
-    let slides = document.getElementsByClassName("mySlides");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
+    // Remove active class from current slide
+    slides[slideIndex].classList.remove("active");
+    
+    // Move to next slide
     slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(() => { slides[slideIndex-1].style.opacity = 1; }, 10);
-    setTimeout(carousel, 2000); // Change image every 6 seconds
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    }
+    
+    // Add active class to new slide
+    slides[slideIndex].classList.add("active");
+    
+    // Change image every 4 seconds
+    setTimeout(carousel, 4000);
 }
+
+// Start the carousel after initial delay
+setTimeout(carousel, 4000);
 
 window.onload = () => {
     adjustLogoAndContentPosition();
@@ -313,26 +319,7 @@ window.onload = () => {
 };
 
 function adjustLogoAndContentPosition() {
-    const slideshow = document.querySelector('.slideshow-container');
-    const logo = document.querySelector('.logo');
-    const contentFollowingLogo = document.querySelector('h2'); // This targets the "Marco Burger, PhD" heading.
-    if (slideshow && logo && contentFollowingLogo) {
-        const slideshowHeight = slideshow.offsetHeight;
-        logo.style.width = `auto`; // Maintain aspect ratio
-        logo.style.height = `${slideshowHeight * 0.8}px`; // 80% of the slideshow height
-        const logoHeight = logo.offsetHeight;
-        const logoPositionOffset = logoHeight * (3 / 4);
-        logo.style.top = `${slideshow.getBoundingClientRect().top + window.scrollY + slideshowHeight - logoPositionOffset}px`;
-        logo.style.transform = 'translateX(-50%)'; // Adjust only horizontally
-
-        // Calculate dynamic additional space based on a percentage of the logo's height
-        const dynamicSpacePercentage = 0.1; // Example: 10% of the logo's height
-        const dynamicExtraSpace = logoHeight * dynamicSpacePercentage;
-
-        // Calculate the total space needed, including the dynamic extra space
-        const totalSpaceNeeded = (logoHeight - logoPositionOffset) + dynamicExtraSpace;
-        contentFollowingLogo.style.marginTop = `${totalSpaceNeeded}px`;
-    }
+    // Logo is now static, no dynamic positioning needed
 }
 </script>
 </body>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1245E6F667"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1245E6F667');
+</script>
+    <meta charset="UTF-8">
+    <title>PLANTXRAY | Genomes</title>
+    <link rel="icon" type="image/png" href="plantxray_logo_2.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            width: 60px;
+            height: auto;
+            margin-right: 5px;
+            margin-top: 10px;
+        }
+        h1 {
+            font-size: 30px;
+            color: #fff;
+            padding: 20px;
+            margin: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            background: linear-gradient(to right, #FF6347, #C40234); 
+            border-radius: 10px;
+            z-index: -1;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .genome-card {
+            flex: 1;
+            padding: 1.5rem;
+            box-sizing: border-box;
+            min-width: 280px;
+            max-width: 320px;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            border-radius: 8px;
+            margin: 1rem;
+            transition: box-shadow 0.3s ease;
+        }
+        .genome-card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 3px 6px rgba(0,0,0,0.15);
+        }
+        .plant-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            background-color: #e0e0e0;
+        }
+        .species-name {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+        .common-name {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+		.host-info {
+			font-size: 1rem;
+			color: #000000;
+			margin-bottom: 0.5rem;
+		}
+        .description {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        .links-section {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+        .link-group {
+            margin-bottom: 0.8rem;
+        }
+        .link-label {
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #333;
+            margin-bottom: 0.3rem;
+        }
+        .genbank-link {
+            color: #800080;
+        }
+        .genbank-link a {
+            color: #800080;
+            text-decoration: none;
+        }
+        .genbank-link a:hover {
+            text-decoration: underline;
+        }
+        .blast-link {
+            color: #0018A8;
+        }
+        .blast-link a {
+            color: #0018A8;
+            text-decoration: none;
+        }
+        .blast-link a:hover {
+            text-decoration: underline;
+        }
+        .publication-link {
+            color: #C40234;
+        }
+        .publication-link a {
+            color: #C40234;
+            text-decoration: none;
+        }
+        .publication-link a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            width: 100%;
+        }
+        .intro-text {
+            max-width: 900px;
+            margin: 0 auto 1rem auto;
+            padding: 0 1rem;
+            text-align: center;
+            color: #000000;
+            line-height: 1.6;
+			font-size: 1.2rem;
+        }
+        #menu {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            margin-top: 20px;
+            z-index: 1000;
+            text-align: left;
+        }
+        #menu a {
+            font-size: 30px;
+            color: #333;
+            text-decoration: none;
+        }
+        .menu-btn {
+            font-size: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <img class="logo" src="plantxray_logo_2.png" alt="logo">
+    </div>
+    <h1>GENOMES</h1>
+    <div id="menu">
+        <a href="index.html">Home</a><br>
+        <a href="publications.html">Publications</a><br>
+        <a href="structures.html">Structure Gallery</a><br>
+		<a href="genomes.html">Genomes</a>
+    </div>
+    <script>
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    // Check if menu.style.display is "block", implying the menu is already open.
+    // Otherwise, treat it as if it needs to be shown (covers both "none" and "" cases).
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+
+    </script>
+
+    <div style="height: 40px;"></div>
+
+    <p class="intro-text">
+        This page provides access to parasitic plant genome assemblies generated as part of our research. 
+    </p>
+
+    <div class="container">
+
+        <!-- Castilleja foliolosa -->
+        <div class="genome-card">
+            <img class="plant-image" src="castilleja_foliolosa.jpg" alt="Castilleja foliolosa">
+            <div class="species-name">Castilleja foliolosa</div>
+            <div class="common-name">Woolly Indian Paintbrush</div>
+            <div class="host-info">Host range: Generalist</div>
+            <div class="description">
+                A hemiparasitic plant native to California and Baja California. This genome was sequenced to study strigolactone-induced haustorium formation.
+            </div>
+            <div class="links-section">
+                <div class="link-group genbank-link">
+                    <div class="link-label">GenBank:</div>
+                    <a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_046119335.1/" target="_blank">GCA_046119335.1</a>
+                </div>
+                <div class="link-group blast-link">
+                    <div class="link-label">BLAST:</div>
+                    <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastp&PAGE_TYPE=BlastSearch&DATABASE=nr&EQ_MENU=Castilleja%20foliolosa%20(taxid%3A2932579)" target="_blank">Protein BLAST</a>
+                </div>
+                <div class="link-group publication-link">
+                    <div class="link-label">Publication:</div>
+                    <a href="https://doi.org/10.1016/j.isci.2024.111491" target="_blank">Bürger et al., 2024</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orobanche gracilis -->
+        <div class="genome-card">
+            <img class="plant-image" src="orobanche_gracilis.jpg" alt="Orobanche gracilis">
+            <div class="species-name">Orobanche gracilis</div>
+            <div class="common-name">Slender Broomrape</div>
+            <div class="host-info">Host range: Fabaceae</div>
+            <div class="description">
+                A holoparasitic plant that exclusively parasitizes members of the legume family. Features expanded protein-degrading and carbohydrate-active enzyme families.
+            </div>
+            <div class="links-section">
+                <div class="link-group genbank-link">
+                    <div class="link-label">GenBank:</div>
+                    <a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_050575165.1/" target="_blank">GCA_050575165.1</a>
+                </div>
+                <div class="link-group blast-link">
+                    <div class="link-label">BLAST:</div>
+                    <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastp&PAGE_TYPE=BlastSearch&DATABASE=nr&EQ_MENU=Orobanche%20gracilis%20(taxid%3A223098)" target="_blank">Protein BLAST</a>
+                </div>
+                <div class="link-group publication-link">
+                    <div class="link-label">Publication:</div>
+                    <a href="https://doi.org/10.1093/pcp/pcaf047" target="_blank">Bürger et al., 2025</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orobanche hederae -->
+        <div class="genome-card">
+            <img class="plant-image" src="orobanche_hederae.jpg" alt="Orobanche hederae">
+            <div class="species-name">Orobanche hederae</div>
+            <div class="common-name">Ivy Broomrape</div>
+            <div class="host-info">Host range: Araliaceae</div>
+            <div class="description">
+                A holoparasitic plant highly specialized to parasitize Araliaceae, mostly ivy. Despite morphological similarity to <i>O. minor</i>, it has a much narrower host range.
+            </div>
+            <div class="links-section">
+                <div class="link-group genbank-link">
+                    <div class="link-label">GenBank:</div>
+                    <a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_050575145.1/" target="_blank">GCA_050575145.1</a>
+                </div>
+                <div class="link-group blast-link">
+                    <div class="link-label">BLAST:</div>
+                    <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastp&PAGE_TYPE=BlastSearch&DATABASE=nr&EQ_MENU=Orobanche%20hederae%20(taxid%3A79235)" target="_blank">Protein BLAST</a>
+                </div>
+                <div class="link-group publication-link">
+                    <div class="link-label">Publication:</div>
+                    <a href="https://doi.org/10.1093/pcp/pcaf047" target="_blank">Bürger et al., 2025</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orobanche minor -->
+        <div class="genome-card">
+            <img class="plant-image" src="orobanche_minor.jpg" alt="Orobanche minor">
+            <div class="species-name">Orobanche minor</div>
+            <div class="common-name">Common Broomrape</div>
+            <div class="host-info">Host range: Generalist</div>
+            <div class="description">
+                A holoparasitic generalist capable of parasitizing numerous host species across multiple plant families.
+            </div>
+            <div class="links-section">
+                <div class="link-group genbank-link">
+                    <div class="link-label">GenBank:</div>
+                    <a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_050575125.1/" target="_blank">GCA_050575125.1</a>
+                </div>
+                <div class="link-group blast-link">
+                    <div class="link-label">BLAST:</div>
+                    <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastp&PAGE_TYPE=BlastSearch&DATABASE=nr&EQ_MENU=Orobanche%20minor%20(taxid%3A36748)" target="_blank">Protein BLAST</a>
+                </div>
+                <div class="link-group publication-link">
+                    <div class="link-label">Publication:</div>
+                    <a href="https://doi.org/10.1093/pcp/pcaf047" target="_blank">Bürger et al., 2025</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
